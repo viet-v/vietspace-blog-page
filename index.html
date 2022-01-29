@@ -32,7 +32,7 @@
     <div class="nav-overlay"></div>
 
     <div class="container">
-        <video autoplay loop muted>
+        <video id="video" autoplay preload="auto" loop muted>
             <source src="coding-background.mp4" type="video/mp4" />
         </video>
         <div class="title">
@@ -42,16 +42,20 @@
             As a person who likes jotting down special events, I came up with the idea of recording the learning to code journey. Better late than never.
         </h2>
         <article class="blog-container">
-            <a href="completing-freeCodeCamp-js-certification/" class="blog">
-                <article class="blog-box">
-                    <div class="blog-img" id="img1"></div>
-                    <p class="description">During one month with freeCodeCamp I learned a lot more to consolidate my JavaScript foundation.</p>
-                </article>        
-            </a>
             <a href="soundwave-music-player/" class="blog">
                 <article class="blog-box">
                     <div class="blog-img" id="img2"></div>
-                    <p class="description">From the love with music and visualization, I came up with this idea to build a minimal music player with dynamic sound waves.</p>
+                    <p class="description">
+                      <b>I built a minimal music player from scratch</b><br><br>
+                      From the love with music and visualization, I came up with this idea to build a minimal music player with dynamic sound waves.</p>
+                </article>        
+            </a>
+            <a href="completing-freeCodeCamp-js-certification/" class="blog">
+                <article class="blog-box">
+                    <div class="blog-img" id="img1"></div>
+                    <p class="description">
+                      <b>Completing the freeCodeCamp JavaScript Algorithms and Data Structures Certification</b><br><br>
+                      During one month with freeCodeCamp I learned a lot more to consolidate my JavaScript foundation.</p>
                 </article>        
             </a>
         </article>
@@ -81,6 +85,8 @@
         const navMobile = document.querySelector(".nav-mobile");
         const navOverlay = document.querySelector(".nav-overlay");
         const stickyBarMobile = document.getElementById("sticky-bar-mobile");
+
+        // document.getElementById('video').play();
         
         navBars.addEventListener("click", () => {   /* click hamburger menu */
             navMobile.classList.add("show");
